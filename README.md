@@ -6,61 +6,54 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# {repo-template}
+# usage — a Claude Code mod
 
-## TODO (after you generated the repo)
+Live view of your Claude plan usage in the band above the prompt, updated after every turn:
 
-- [ ] Review the content of the README.md and adjust to your liking
-- [ ] Read the README.md till the end and adjust the content licensing,
-      logos, etc (I know you stopped at tbd...)
-- [ ] Adjust the file [.github/CODEOWNERS](./.github/CODEOWNERS)
-- [ ] Adjust the files under [.github/ISSUE_TEMPLATE](./.github/ISSUE_TEMPLATE)
-- [ ] If you need renovate, enable it for your repository in the renovate app in the settings of your organisation
-- [ ] If you use staging and main branches use this template for [.github/renovate.json](./.github/renovate.json)
-
-```json
-{
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["github>technologiestiftung/renovate-config"],
-	"baseBranches": ["staging"]
-}
+```
+◔ session [  42%    ] ↻ 15:30  weekly [ 18%      ] ↻ Thu 09:00  ▂▃▅█▁▂  ▲ +98.3k last turn
 ```
 
-- [ ] Do you want to honor all kinds of contributions? Use [all-contributors](https://allcontributors.org/)
+- Session (5h) and weekly meters, colored green → yellow → red, the percentage drawn in black or white for contrast
+- Local reset times: time of day for the session, weekday and time for the week
+- Sparkline of the tokens spent in the last 12 turns
+- Tokens the last turn added (input, cache writes and output, subagents included; cache reads left out)
 
-```bash
-npx all-contributors-cli check
-npx all-contributors-cli add ff6347 doc
-```
-
-You can use it on GitHub just by commenting on PRs and issues:
-
-```plain
-@all-contributors please add @ff6347 for infrastructure, tests and code
-```
-
-- [ ] Add your project description
-- [ ] Get fancy shields at https://shields.io
+Meters show only on a Claude subscription; with an API key you get the sparkline and turn total.
 
 ## Prerequisites
 
-tbd...
+Claude Code v2.1.287 or later (tested with 2.1.292).
 
 ## Installation
 
-tbd...
+In Claude Code:
 
-## Usage or Deployment
+```
+/plugin install usage --marketplace technologiestiftung/claude-code-usage-mod
+```
 
-tbd...
+Answer `y` to add the marketplace, then pick the user scope.
 
 ## Development
 
-tbd...
+Load the working copy instead of the installed one; it hot-reloads on save:
+
+```bash
+claude --plugin-dir .
+```
+
+The code is in [`hooks/register.tsx`](./hooks/register.tsx). Check it with:
+
+```bash
+claude plugin validate .
+```
 
 ## Tests
 
-tbd...
+```bash
+claude plugin test .
+```
 
 ## Contributing
 

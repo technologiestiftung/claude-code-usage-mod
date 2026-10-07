@@ -1,0 +1,11 @@
+{
+  "name": "usage",
+  "version": "0.1.0",
+  "description": "Live session/weekly usage meters, reset times and a per-turn token sparkline above the prompt",
+  "author": { "name": "Technologiestiftung Berlin", "url": "https://www.technologiestiftung-berlin.de" },
+  "homepage": "https://github.com/technologiestiftung/claude-code-usage-mod",
+  "repository": "https://github.com/technologiestiftung/claude-code-usage-mod",
+  "license": "MIT",
+  "keywords": ["usage", "rate-limits", "tokens", "mod"],
+  "types": "./types/index.d.ts"
+}

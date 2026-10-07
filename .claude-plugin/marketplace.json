@@ -1,0 +1,13 @@
+{
+  "name": "technologiestiftung-usage",
+  "description": "Claude Code mod: live session/weekly usage above the prompt",
+  "owner": {
+    "name": "Technologiestiftung Berlin"
+  },
+  "plugins": [
+    {
+      "name": "usage",
+      "source": "./"
+    }
+  ]
+}
