@@ -120,7 +120,7 @@ export const register: Register = on => {
     const lastTurn = history[history.length - 1]
 
     return (
-      <Box flexDirection="row">
+      <Box flexDirection="row" marginTop={1}>
         <Text color="claude">◔ </Text>
         {meters.map(({ label, limit, withDay }) => (
           <Box key={label} flexDirection="row">
